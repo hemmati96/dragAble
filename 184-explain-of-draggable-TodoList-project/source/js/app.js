@@ -23,6 +23,9 @@ function removeValue(){
 	todoInput.value=''
 	
 }
+function removeTodoHandller(event){
+  event.target.parentElement.remove()
+}
 
 function addTodoHandler(){
     let inputValue=todoInput.value
@@ -42,12 +45,18 @@ function addTodoHandler(){
            const todoId='todo'+ todoCounter;
            newTodo.id=todoId;
            todoCounter++
+        newTodo.addEventListener('click', removeTodoHandller)
+
            removeValue()
            modal.classList.remove('active')
              
            }
            
- }        
+ }     
+  
+ 
+
+
 
 function dragStartHandler(event){
 
@@ -69,15 +78,9 @@ function dragStartHandler(event){
              event.target.append(targetElem)
              
             }  
- function  removeTodo(){
-    todoElem.forEach(function(todo)){
-        todo.remove()
-    }
- }      
- 
+
 addTodo.addEventListener('click',addTodoHandler)
 button.addEventListener('click',clickHandler)
-closeElem.addEventListener('click',removeTodo)
 
 
 
