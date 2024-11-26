@@ -52,7 +52,9 @@ function addTodoHandler(){
 function dragStartHandler(event){
 
     event.dataTransfer.setData('elemId',event.target.id)
- 
+
+
+
      
              }
 
@@ -66,11 +68,16 @@ function dragStartHandler(event){
              const targetElem=$.getElementById(data)
              event.target.append(targetElem)
              
-            }          
+            }  
+ function  removeTodo(){
+    todoElem.forEach(function(todo)){
+        todo.remove()
+    }
+ }      
  
 addTodo.addEventListener('click',addTodoHandler)
 button.addEventListener('click',clickHandler)
-
+closeElem.addEventListener('click',removeTodo)
 
 
 
