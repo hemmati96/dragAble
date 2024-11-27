@@ -23,7 +23,7 @@ function removeValue(){
 	todoInput.value=''
 	
 }
-function removeTodoHandller(event){
+function removeTodoHandler(event){
   event.target.parentElement.remove()
 }
 
@@ -45,7 +45,7 @@ function addTodoHandler(){
            const todoId='todo'+ todoCounter;
            newTodo.id=todoId;
            todoCounter++
-        newTodo.addEventListener('click', removeTodoHandller)
+        newTodo.addEventListener('click', removeTodoHandler)
 
            removeValue()
            modal.classList.remove('active')
