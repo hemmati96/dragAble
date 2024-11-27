@@ -13,11 +13,11 @@ function clickHandler(){
 modal.classList.add('active')
 
 }
-function submitHandler(){
-preventDefault()
+// function submitHandler(){
+// preventDefault()
 
-}
-divElem.addEventListener('submit',submitHandler)
+// }
+// divElem.addEventListener('submit',submitHandler)
 
 function removeValue(){
 	todoInput.value=''
@@ -26,6 +26,10 @@ function removeValue(){
 function removeTodoHandler(event){
   event.target.parentElement.remove()
 }
+function clearTodoHandler(event){
+  event.target.parentElement.remove()
+}
+
 
 function addTodoHandler(){
     let inputValue=todoInput.value
@@ -81,6 +85,6 @@ function dragStartHandler(event){
 
 addTodo.addEventListener('click',addTodoHandler)
 button.addEventListener('click',clickHandler)
-
+closeElem.addEventListener('click',clearTodoHandler)
 
 
