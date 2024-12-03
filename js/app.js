@@ -82,5 +82,5 @@ function dragStartHandler(event){
 addTodo.addEventListener('click',addTodoHandler)
 button.addEventListener('click',clickHandler)
 closeElem.addEventListener('click',clearTodoHandler)
-
+له
 
